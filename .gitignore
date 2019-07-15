@@ -1,0 +1,9 @@
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+magic2019.pdf
+R/_cache

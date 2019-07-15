@@ -1,0 +1,87 @@
+\documentclass[12pt,t,aspectratio=1610]{beamer}
+\usepackage{graphicx}
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+\usepackage{listings}
+
+\input{header.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% end of header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% title info
+\title{QTL mapping \\ in MAGIC populations \\ with R/qtl2}
+\subtitle{}
+\author{\href{https://kbroman.org}{Karl Broman}}
+\institute{Biostatistics \& Medical Informatics, UW{\textendash}Madison}
+\date{\href{https://kbroman.org}{\tt \scriptsize \color{foreground} kbroman.org}
+\\[-4pt]
+\href{https://github.com/kbroman}{\tt \scriptsize \color{foreground} github.com/kbroman}
+\\[-4pt]
+\href{https://twitter.com/kwbroman}{\tt \scriptsize \color{foreground} @kwbroman}
+\\[2pt]
+\scriptsize {\lolit Slides:} \href{https://bit.ly/magic19}{\tt \scriptsize
+  \color{foreground} bit.ly/magic19}
+}
+
+
+\begin{document}
+
+% title slide
+{
+\setbeamertemplate{footline}{} % no page number here
+\frame{
+  \titlepage
+
+  \vfill \hfill \includegraphics[height=6mm]{Figs/cc-zero.png} \vspace*{-3mm}
+
+  \note{These are slides for a talk that I will give at the MAGIC
+    workshop in Cambridge, UK, on 23 July 2019.
+
+    Source: {\tt https://github.com/kbroman/Talk\_MAGIC2019} \\
+    Slides: {\tt https://bit.ly/magic2019}
+}
+} }
+
+
+
+\begin{frame}[c]{19 years of R/qtl}
+
+\figw{Figs/rqtl_lines_code.pdf}{1.0}
+
+\end{frame}
+
+
+
+
+\begin{frame}[c]{}
+
+\Large
+
+Slides: \href{https://bit.ly/magic19}{\tt bit.ly/magic19} \quad
+\includegraphics[height=5mm]{Figs/cc-zero.png}
+
+\vspace{7mm}
+
+\href{https://kbroman.org}{\tt \lolit kbroman.org}
+
+\vspace{7mm}
+
+\href{https://kbroman.org/qtl2}{\tt kbroman.org/qtl2}
+
+\vspace{7mm}
+
+\href{https://github.com/kbroman}{\tt \lolit github.com/kbroman}
+
+\vspace{7mm}
+
+\href{https://twitter.com/kwbroman}{\tt \lolit @kwbroman}
+
+
+\end{frame}
+
+
+
+
+\end{document}
