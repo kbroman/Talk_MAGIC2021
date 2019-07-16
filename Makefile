@@ -4,7 +4,8 @@ STEM = magic2019
 
 FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/phefile.pdf \
-	   Figs/geno_reconstruct.pdf
+	   Figs/geno_reconstruct.pdf \
+	   Figs/scan_hk.pdf
 
 docs/$(STEM).pdf: $(STEM).pdf
 	cp $< $@
@@ -16,13 +17,16 @@ web: $(STEM).pdf
 	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM).pdf
 
 Figs/rqtl_lines_code.pdf: R/colors.R Data/lines_code_by_version.csv R/rqtl_lines_code.R
-	cd R;R CMD BATCH rqtl_lines_code.R
+	cd R;R CMD BATCH $(R_OPTS) rqtl_lines_code.R
 
 Figs/phefile.pdf: R/data_files_fig.R
-	cd $(<D);R CMD BATCH $(<F)
+	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 Figs/geno_reconstruct.pdf: R/geno_reconstruct_fig.R
-	cd $(<D);R CMD BATCH $(<F)
+	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
+
+Figs/scan_hk.pdf: R/scans_fig.R
+	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 Data/lines_code_by_version.csv: Perl/grab_lines_code.pl Data/versions.txt
 	cd Perl;grab_lines_code.pl
