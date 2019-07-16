@@ -338,7 +338,7 @@ pr <- calc_genoprob(arab, gmap, error_prob=0.002, cores=24)
 
 \begin{frame}[c]{Genome scan}
 
-\only<1>{\figw{Figs/scan_hk.pdf}{1.0}}
+\figw{Figs/scan_hk.pdf}{1.0}
 
 \end{frame}
 
@@ -348,9 +348,9 @@ pr <- calc_genoprob(arab, gmap, error_prob=0.002, cores=24)
 
 \begin{center} \begin{minipage}[c]{11.5cm} \begin{semiverbatim}
 \begin{lstlisting}[linewidth=11.5cm]
-out <- scan1(pr, arab$pheno[,"fruit_length"], cores=24)
+%out <- scan1(pr, arab$pheno[,"fruit_length"], cores=24)
 
-operm <- scan1perm(pr, arab$pheno[,"fruit_length"], n_perm=1000, cores=24)
+%operm <- scan1perm(pr, arab$pheno[,"fruit_length"], n_perm=1000, cores=24)
 \end{lstlisting}
 \end{semiverbatim} \end{minipage} \end{center}
 
@@ -404,6 +404,5 @@ Slides: \href{https://bit.ly/MAGIC19}{\tt bit.ly/MAGIC19} \quad
 
 
 \end{frame}
-
 
 \end{document}

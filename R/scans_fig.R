@@ -19,15 +19,15 @@ if(file.exists(file)) {
 
     k <- calc_kinship(pr, cores=0)
     out_lmm <- scan1(pr, arab$pheno[,"fruit_length"], k, cores=0)
-    operm_lmm <- scan1perm(pr, arab$pheno[,"fruit_length"], k, n_perm=1000, cores=0)
+#    operm_lmm <- scan1perm(pr, arab$pheno[,"fruit_length"], k, n_perm=1000, cores=0)
 
     kloco <- calc_kinship(pr, "loco", cores=0)
     out_loco <- scan1(pr, arab$pheno[,"fruit_length"], kloco, cores=0)
-    operm_loco <- scan1perm(pr, arab$pheno[,"fruit_length"], kloco, n_perm=1000, cores=0)
+#    operm_loco <- scan1perm(pr, arab$pheno[,"fruit_length"], kloco, n_perm=1000, cores=0)
 
     save(out_hk, operm_hk,
-         out_lmm, operm_lmm,
-         out_loco, operm_loco,
+         out_lmm, #operm_lmm,
+         out_loco, #operm_loco,
          file=file)
 }
 
