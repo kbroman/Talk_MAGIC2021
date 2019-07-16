@@ -291,7 +291,49 @@ arab <- read_cross2("arab_magic.json")
 \end{lstlisting}
 \end{semiverbatim} \end{minipage} \end{center}
 
+
+\vfill
+\hfill \begin{minipage}[c]{6cm}
+
+  \small
+  {\color{title} 19-way Arabidopsis MAGIC} \\
+  Kover et al. (2009) PLoS Genet \\
+  Gnan et al. (2014) Genetics \\
+  {\tt github.com/rqtl/qtl2data}
+
+
+\end{minipage}
+
+
 \end{frame}
+
+
+
+\begin{frame}[c]{Genotype reconstruction}
+
+
+\only<1>{\figw{Figs/geno_reconstruct.pdf}{0.95}}
+\only<2>{\figw{Figs/geno_reconstruct_B.pdf}{0.95}}
+
+\end{frame}
+
+
+
+
+\begin{frame}[c,fragile]{Genotype reconstruction}
+\addtocounter{framenumber}{-1}
+
+\begin{center} \begin{minipage}[c]{11.5cm} \begin{semiverbatim}
+\begin{lstlisting}[linewidth=11.5cm]
+gmap <- insert_pseudomarkers(arab$gmap, step=0.2, stepwidth="max")
+pmap <- interp_map(gmap, arab$gmap, arab$pmap)
+
+pr <- calc_genoprob(arab, gmap, error_prob=0.002, cores=24)
+\end{lstlisting}
+\end{semiverbatim} \end{minipage} \end{center}
+
+\end{frame}
+
 
 
 
