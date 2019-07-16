@@ -115,6 +115,189 @@
 
 
 
+
+
+
+\begin{frame}{Data files}
+
+\includegraphics[width=0.8\textwidth]{Figs/phefile.pdf}
+
+\only<2->{
+  \vspace*{-50mm}
+  \hspace*{15mm}
+  \includegraphics[width=0.8\textwidth]{Figs/genfile.pdf}
+}
+
+
+\only<3->{
+  \vspace*{-50mm}
+  \hspace*{30mm}
+  \includegraphics[width=0.8\textwidth]{Figs/fgfile.pdf}
+}
+
+\only<4->{
+  \vspace*{-60mm}
+  \hspace*{45mm}
+  \includegraphics[width=0.4\textwidth]{Figs/pmapfile.pdf}
+}
+
+
+\end{frame}
+
+
+
+\begin{frame}[c,fragile]{Control file (JSON)}
+\begin{semiverbatim} \begin{lstlisting}[escapechar=!,]
+{
+  "description": "Arabidopsis MAGIC data, Gnan et al (2014)",
+  !\color{foreground}{"crosstype": "magic19",}!
+  "sep": ",",
+  "na.strings": ["-", "NA"],
+  "comment.char": "#",
+  !\color{foreground}{"geno": "arabmagic_geno.csv",}!
+  "founder_geno": "arabmagic_foundergeno.csv",
+  "gmap": "arabmagic_pmap_tair9.csv",
+  "pmap": "arabmagic_pmap_tair9.csv",
+  "pheno": "arabmagic_pheno.csv",
+  !\color{foreground}{"genotypes": {}!
+  !\color{foreground}{  "A": 3}!
+  !\color{foreground}{  "H": 3}!
+  !\color{foreground}{  "B": 3}!
+  !\color{foreground}{\},}!
+  !\color{foreground}{"geno_transposed": true,}!
+  "founder_geno_transposed": true
+}
+\end{lstlisting} \end{semiverbatim}
+\end{frame}
+
+
+\begin{frame}[c,fragile]{Control file (JSON)}
+\addtocounter{framenumber}{-1}
+\begin{semiverbatim} \begin{lstlisting}[escapechar=!]
+{
+  "description": "Arabidopsis MAGIC data, Gnan et al (2014)",
+  !\color{vhilit}{"crosstype": "magic19",}!
+  "sep": ",",
+  "na.strings": ["-", "NA"],
+  "comment.char": "#",
+  !\color{foreground}{"geno": "arabmagic_geno.csv",}!
+  "founder_geno": "arabmagic_foundergeno.csv",
+  "gmap": "arabmagic_pmap_tair9.csv",
+  "pmap": "arabmagic_pmap_tair9.csv",
+  "pheno": "arabmagic_pheno.csv",
+  !\color{foreground}{"genotypes": {}!
+  !\color{foreground}{  "A": 3}!
+  !\color{foreground}{  "H": 3}!
+  !\color{foreground}{  "B": 3}!
+  !\color{foreground}{\},}!
+  !\color{foreground}{"geno_transposed": true,}!
+  "founder_geno_transposed": true
+}
+\end{lstlisting} \end{semiverbatim}
+\end{frame}
+
+
+
+\begin{frame}[c,fragile]{Control file (JSON)}
+\addtocounter{framenumber}{-1}
+\begin{semiverbatim} \begin{lstlisting}[escapechar=!]
+{
+  "description": "Arabidopsis MAGIC data, Gnan et al (2014)",
+  !\color{foreground}{"crosstype": "magic19",}!
+  "sep": ",",
+  "na.strings": ["-", "NA"],
+  "comment.char": "#",
+  !\color{vhilit}{"geno": "arabmagic_geno.csv",}!
+  "founder_geno": "arabmagic_foundergeno.csv",
+  "gmap": "arabmagic_pmap_tair9.csv",
+  "pmap": "arabmagic_pmap_tair9.csv",
+  "pheno": "arabmagic_pheno.csv",
+  !\color{foreground}{"genotypes": {}!
+  !\color{foreground}{  "A": 3}!
+  !\color{foreground}{  "H": 3}!
+  !\color{foreground}{  "B": 3}!
+  !\color{foreground}{\},}!
+  !\color{foreground}{"geno_transposed": true,}!
+  "founder_geno_transposed": true
+}
+\end{lstlisting} \end{semiverbatim}
+\end{frame}
+
+
+
+\begin{frame}[c,fragile]{Control file (JSON)}
+\addtocounter{framenumber}{-1}
+\begin{semiverbatim} \begin{lstlisting}[escapechar=!]
+{
+  "description": "Arabidopsis MAGIC data, Gnan et al (2014)",
+  !\color{foreground}{"crosstype": "magic19",}!
+  "sep": ",",
+  "na.strings": ["-", "NA"],
+  "comment.char": "#",
+  !\color{foreground}{"geno": "arabmagic_geno.csv",}!
+  "founder_geno": "arabmagic_foundergeno.csv",
+  "gmap": "arabmagic_pmap_tair9.csv",
+  "pmap": "arabmagic_pmap_tair9.csv",
+  "pheno": "arabmagic_pheno.csv",
+  !\color{vhilit}{"genotypes": {}!
+  !\color{vhilit}{  "A": 3}!
+  !\color{vhilit}{  "H": 3}!
+  !\color{vhilit}{  "B": 3}!
+  !\color{vhilit}{\},}!
+  !\color{foreground}{"geno_transposed": true,}!
+  "founder_geno_transposed": true
+}
+\end{lstlisting} \end{semiverbatim}
+\end{frame}
+
+
+
+\begin{frame}[c,fragile]{Control file (JSON)}
+\addtocounter{framenumber}{-1}
+\begin{semiverbatim} \begin{lstlisting}[escapechar=!]
+{
+  "description": "Arabidopsis MAGIC data, Gnan et al (2014)",
+  !\color{foreground}{"crosstype": "magic19",}!
+  "sep": ",",
+  "na.strings": ["-", "NA"],
+  "comment.char": "#",
+  !\color{foreground}{"geno": "arabmagic_geno.csv",}!
+  "founder_geno": "arabmagic_foundergeno.csv",
+  "gmap": "arabmagic_pmap_tair9.csv",
+  "pmap": "arabmagic_pmap_tair9.csv",
+  "pheno": "arabmagic_pheno.csv",
+  !\color{foreground}{"genotypes": {}!
+  !\color{foreground}{  "A": 3}!
+  !\color{foreground}{  "H": 3}!
+  !\color{foreground}{  "B": 3}!
+  !\color{foreground}{\},}!
+  !\color{vhilit}{"geno_transposed": true,}!
+  "founder_geno_transposed": true
+}
+\end{lstlisting} \end{semiverbatim}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile,c]{Reading data into R}
+
+
+\begin{center} \begin{minipage}[c]{11.7cm} \begin{semiverbatim}
+\lstset{basicstyle=\large}
+\begin{lstlisting}[linewidth=11.7cm]
+library(qtl2)
+arab <- read_cross2("arab_magic.json")
+\end{lstlisting}
+\end{semiverbatim} \end{minipage} \end{center}
+
+\end{frame}
+
+
+
+
+
+
 \begin{frame}[c]{}
 
 \Large
@@ -140,8 +323,6 @@ Slides: \href{https://bit.ly/MAGIC19}{\tt bit.ly/MAGIC19} \quad
 
 
 \end{frame}
-
-
 
 
 \end{document}
