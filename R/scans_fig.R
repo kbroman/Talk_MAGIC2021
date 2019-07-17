@@ -28,12 +28,11 @@ if(file.exists(file)) {
 
 plot_scan <-
     function(version=1, lodcolumn="fruit_length", title="fruit length",
-             color=c("darkslateblue", "#49A56E", "#F15A24"), legend=TRUE)
+             color=c("darkslateblue", "#49A56E", "#F15A24"), legend=TRUE,
+             ymx=max(cbind(out_hk[,lodcolumn], out_lmm[,lodcolumn], out_loco[,lodcolumn])))
 {
     par(mar=c(4.1,4.1,0.6,0.6),
         fg="white", col.lab="white", col.axis="white")
-
-    ymx <- max(cbind(out_hk[,lodcolumn], out_lmm[,lodcolumn], out_loco[,lodcolumn]))
 
     plot(out_hk, pmap, lodcolumn=lodcolumn, ylim=c(0, ymx*1.05), col=color[1])
 
@@ -46,23 +45,23 @@ plot_scan <-
     if(version>=3) plot(out_loco, pmap, lodcolumn=lodcolumn, col=color[3], add=TRUE)
 
     if(version>=2 && legend) {
-        legend("topleft", col=color[1:version], lwd=2, c("haley-knott", "lmm", "loco")[1:version],
+        legend("topleft", col=color[1:version], lwd=2, c("haley-knott", "lmm", "lmm w/loco")[1:version],
                text.col="black", box.col="black", bg="gray90")
     }
 }
 
 pdf("../Figs/scan_hk.pdf", height=5.5, width=11, pointsize=16)
-plot_scan(1)
+plot_scan(1, ymx=41.55)
 dev.off()
 
 pdf("../Figs/scan_lmm.pdf", height=5.5, width=11, pointsize=16)
-plot_scan(2)
+plot_scan(2, ymx=41.55)
 dev.off()
 
 pdf("../Figs/scan_loco.pdf", height=5.5, width=11, pointsize=16)
-plot_scan(3)
+plot_scan(3, ymx=41.55)
 dev.off()
 
 pdf("../Figs/scan_seedwt.pdf", height=5.5, width=11, pointsize=16)
-plot_scan(3, "seed_weight", "seed weight", legend=FALSE)
+plot_scan(3, "seed_weight", "seed weight", ymx=41.55)
 dev.off()
