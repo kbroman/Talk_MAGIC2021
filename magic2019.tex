@@ -370,6 +370,35 @@ out_loco <- scan1(pr, arab$pheno, k_loco, cores=24)
 
 
 
+\begin{frame}[c]{SNP association scan}
+
+\only<1>{\figw{Figs/snp_asso.pdf}{1.0}}
+\only<2>{\figw{Figs/snp_asso_B.pdf}{1.0}}
+
+\end{frame}
+
+
+
+\begin{frame}[c]{SNP association scan}
+
+\figw{Figs/snp_asso_C.pdf}{1.0}
+
+\end{frame}
+
+
+\begin{frame}[c,fragile]{SNP association scan}
+
+\begin{center} \begin{minipage}[c]{11.3cm} \begin{semiverbatim}
+\begin{lstlisting}[linewidth=11.3cm]
+snp_pr <- genoprob_to_snpprob(pr, arab)
+
+out_snps <- scan1(snp_pr, arab$fruit, cores=24)
+\end{lstlisting}
+\end{semiverbatim} \end{minipage} \end{center}
+
+\end{frame}
+
+
 
 
 \begin{frame}{Goals}
