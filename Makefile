@@ -7,7 +7,7 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/geno_reconstruct.pdf \
 	   Figs/scan_hk.pdf \
 	   Figs/snp_asso.pdf \
-	   Figs/coef.pdf
+	   Figs/coef_fl.pdf
 
 docs/$(STEM).pdf: $(STEM).pdf
 	cp $< $@
@@ -33,7 +33,7 @@ Figs/scan_hk.pdf: R/scans_fig.R
 Figs/snp_asso.pdf: R/snp_asso_fig.R Figs/scan_hk.pdf
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
-Figs/coef.pdf: R/coef_fig.R Figs/scan_hk.pdf
+Figs/coef_fl.pdf: R/coef_fig.R Figs/scan_hk.pdf
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 Data/lines_code_by_version.csv: Perl/grab_lines_code.pl Data/versions.txt

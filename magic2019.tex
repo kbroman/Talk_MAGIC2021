@@ -413,6 +413,45 @@ out_snps <- scan1(snp_pr, arab$fruit, cores=24)
 
 
 
+
+\begin{frame}[c]{QTL effects}
+
+\only<1>{\figw{Figs/coef_fl.pdf}{1.0}}
+\only<2>{\figw{Figs/blup_fl.pdf}{1.0}}
+
+\end{frame}
+
+
+
+\begin{frame}[c]{QTL effects}
+
+\figw{Figs/blup_sw.pdf}{1.0}
+
+\end{frame}
+
+
+\begin{frame}[c,fragile]{QTL effects}
+
+\begin{center} \begin{minipage}[c]{11.3cm} \begin{semiverbatim}
+\begin{lstlisting}[linewidth=11.3cm]
+fl_peak <- max(out_hk, pmap, lodcolumn="fruit_length")
+fl_pr <- pull_genoprobpos(pr, pmap, fl_peak$chr, fl_peak$pos)
+
+fl_fit1 <- fit1(fl_pr, arab$pheno[,"fruit_length"])
+fl_blup <- fit1(fl_pr, arab$pheno[,"fruit_length"], blup=TRUE)
+\end{lstlisting}
+\end{semiverbatim} \end{minipage} \end{center}
+
+\end{frame}
+
+
+
+
+
+
+
+
+
 \begin{frame}{Goals}
 
   \bbi
