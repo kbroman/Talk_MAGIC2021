@@ -321,7 +321,6 @@ arab <- read_cross2("arab_magic.json")
 
 
 \begin{frame}[c,fragile]{Genotype reconstruction}
-\addtocounter{framenumber}{-1}
 
 \begin{center} \begin{minipage}[c]{11.5cm} \begin{semiverbatim}
 \begin{lstlisting}[linewidth=11.5cm]
@@ -339,18 +338,31 @@ pr <- calc_genoprob(arab, gmap, error_prob=0.002, cores=24)
 \begin{frame}[c]{Genome scan}
 
 \only<1>{\figw{Figs/scan_hk.pdf}{1.0}}
+\only<2>{\figw{Figs/scan_lmm.pdf}{1.0}}
+\only<3>{\figw{Figs/scan_loco.pdf}{1.0}}
+
+\end{frame}
+
+\begin{frame}[c]{Genome scan}
+
+\figw{Figs/scan_seedwt.pdf}{1.0}
 
 \end{frame}
 
 
 \begin{frame}[c,fragile]{Genome scan}
-\addtocounter{framenumber}{-1}
 
-\begin{center} \begin{minipage}[c]{11.5cm} \begin{semiverbatim}
-\begin{lstlisting}[linewidth=11.5cm]
-out <- scan1(pr, arab$pheno[,"fruit_length"], cores=24)
+\begin{center} \begin{minipage}[c]{11.3cm} \begin{semiverbatim}
+\begin{lstlisting}[linewidth=11.3cm]
+out_hk <- scan1(pr, arab$pheno, cores=24)
 
-operm <- scan1perm(pr, arab$pheno[,"fruit_length"], n_perm=1000, cores=24)
+operm_hk <- scan1perm(pr, arab$pheno, n_perm=1000, cores=24)
+
+k <- calc_kinship(pr, cores=24)
+out_lmm <- scan1(pr, arab$pheno, k, cores=24)
+
+k_loco <- calc_kinship(pr, "loco", cores=24)
+out_loco <- scan1(pr, arab$pheno, k_loco, cores=24)
 \end{lstlisting}
 \end{semiverbatim} \end{minipage} \end{center}
 
