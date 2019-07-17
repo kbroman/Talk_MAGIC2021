@@ -1,3 +1,5 @@
+# genome scans by H-K, LMM, LMM w/ LOCO
+
 library(qtl2)
 
 url <- "https://raw.githubusercontent.com/rqtl/qtl2data/master/ArabMAGIC/"

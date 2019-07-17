@@ -1,3 +1,5 @@
+# genotype probabilities/reconstruction
+
 library(qtl2)
 
 url <- "https://raw.githubusercontent.com/rqtl/qtl2data/master/ArabMAGIC/"

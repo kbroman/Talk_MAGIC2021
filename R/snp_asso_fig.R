@@ -1,3 +1,5 @@
+# SNP association scan
+
 library(qtl2)
 
 url <- "https://raw.githubusercontent.com/rqtl/qtl2data/master/ArabMAGIC/"
