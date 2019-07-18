@@ -30,11 +30,13 @@ plot_snp_asso <-
     par(mar=c(4.1,4.1,0.6,0.6),
     fg="white", col.lab="white", col.axis="white")
 
-    plot(out_snps, arab$pmap, lod=lodcolumn, type="p", pch=16, altcol="green3", gap=0,
+    green <- "#49A56E"
+
+    plot(out_snps, arab$pmap, lod=lodcolumn, type="p", pch=16, altcol=green, gap=0,
          ylim=c(0, ymx*1.05), cex=0.6)
 
     if(version==2) {
-        plot(out_hk, arab$pmap, lod=lodcolumn, gap=0, altcol="green3", add=TRUE)
+        plot(out_hk, arab$pmap, lod=lodcolumn, gap=0, altcol=green, add=TRUE)
     }
 
     u <- par("usr")
