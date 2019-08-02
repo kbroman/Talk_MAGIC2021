@@ -1,7 +1,7 @@
 ### Talk on &ldquo;QTL mapping in MAGIC populations with R/qtl2
 
 
-These are slides for a talk that I will give at the [MAGIC
+These are slides for a talk that I gave at the [MAGIC
 workshop](http://mtweb.cs.ucl.ac.uk/mus/www/MAGICdiverse/MAGIC_workshop.htm)
 in Cambridge, UK, on 23 July 2019.
 
