@@ -1,4 +1,4 @@
-### Talk on &ldquo;QTL mapping in MAGIC populations with R/qtl2
+### Talk on &ldquo;QTL mapping in MAGIC populations with R/qtl2&rdquo;
 
 
 These are slides for a talk that I gave at the [MAGIC
