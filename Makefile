@@ -1,6 +1,6 @@
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file # --vanilla, but without --no-environ
 
-STEM = magic2019
+STEM = msu2019
 
 FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/phefile.pdf \
