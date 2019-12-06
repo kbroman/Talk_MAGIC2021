@@ -7,7 +7,8 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/geno_reconstruct.pdf \
 	   Figs/scan_hk.pdf \
 	   Figs/snp_asso.pdf \
-	   Figs/coef_fl.pdf
+	   Figs/coef_fl.pdf \
+	   Figs/intercross.pdf
 
 docs/$(STEM).pdf: $(STEM).pdf
 	cp $< $@
@@ -37,4 +38,7 @@ Data/lines_code_by_version.csv: Perl/grab_lines_code.pl Data/versions.txt
 	cd Perl;grab_lines_code.pl
 
 Figs/magic19_scan.pdf: R/magic19_figs.R R/colors.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/intercross.pdf: R/intercross.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
