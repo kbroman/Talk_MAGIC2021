@@ -9,6 +9,9 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/snp_asso.pdf \
 	   Figs/coef_fl.pdf
 
+docs/$(STEM).pdf: $(STEM).pdf
+	cp $< $@
+
 $(STEM).pdf: $(STEM).tex header.tex $(FIGS)
 	xelatex $<
 
