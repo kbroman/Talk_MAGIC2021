@@ -6,7 +6,7 @@ workshop](http://mtweb.cs.ucl.ac.uk/mus/www/MAGICdiverse/MAGIC_workshop.htm)
 in Cambridge, UK, on 23 July 2019, and then revised and expanded for a
 talk at Michigan State University on 12 Dec 2019.
 
-PDF of slides at [bit.ly/msu2019-12](https://bit.ly/msu2019-12).
+PDF of slides at [bit.ly/msu2019-12](https://kbroman.org/Talk_MSU2019)
 
 ---
 
