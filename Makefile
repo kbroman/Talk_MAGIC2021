@@ -9,7 +9,12 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/snp_asso.pdf \
 	   Figs/coef_fl.pdf \
 	   Figs/intercross.pdf \
-	   Figs/lodcurve_insulin_with_effects.pdf
+	   Figs/lodcurve_insulin_with_effects.pdf \
+	   Figs/congenic.pdf \
+	   Figs/ail.pdf \
+	   Figs/rilines.pdf \
+	   Figs/ri8.pdf \
+	   Figs/hs.pdf
 
 docs/$(STEM).pdf: $(STEM).pdf
 	cp $< $@
@@ -45,4 +50,19 @@ Figs/intercross.pdf: R/intercross.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
 
 Figs/lodcurve_insulin_with_effects.pdf: R/lodcurve_insulin.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/congenic.pdf: R/congenic_fig.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/ail.pdf: R/ail_fig.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/rilines.pdf: R/rilines_fig.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/ri8.pdf: R/ri8_fig.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/hs.pdf: R/hs_fig.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
