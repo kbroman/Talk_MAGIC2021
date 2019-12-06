@@ -15,9 +15,6 @@ docs/$(STEM).pdf: $(STEM).pdf
 $(STEM).pdf: $(STEM).tex header.tex $(FIGS)
 	xelatex $<
 
-web: $(STEM).pdf
-	scp $(STEM).pdf adhara.biostat.wisc.edu:Website/presentations/$(STEM).pdf
-
 Figs/rqtl_lines_code.pdf: R/rqtl_lines_code.R R/colors.R Data/lines_code_by_version.csv
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
