@@ -13,6 +13,7 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/congenic.pdf \
 	   Figs/ail.pdf \
 	   Figs/rilines.pdf \
+	   Figs/riself.pdf \
 	   Figs/ri8.pdf \
 	   Figs/hs.pdf
 
@@ -59,6 +60,9 @@ Figs/ail.pdf: R/ail_fig.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
 
 Figs/rilines.pdf: R/rilines_fig.R
+	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
+
+Figs/riself.pdf: R/riself_fig.R
 	cd $(<D);R $(R_OPTS) -e "source('$(<F)')"
 
 Figs/ri8.pdf: R/ri8_fig.R
