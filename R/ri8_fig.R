@@ -2,6 +2,8 @@
 # RI lines
 ##############################
 
+source("meiosis_func.R")
+
 source("colors.R")
 color <- c(rgb(102,203,254,maxColorValue=255),
 #           rgb(254,102,254,maxColorValue=255),
