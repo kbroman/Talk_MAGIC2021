@@ -65,7 +65,7 @@ if(file.exists(file)) {
 } else {
     f1 <- vector("list",4)
     for(i in 1:4) f1[[i]] <- create.par(100,c(2*i-1,2*i))
-    set.seed(112099)
+    set.seed(1120991)
     f2a <- cross(f1[[1]],f1[[2]],m=10,obl=TRUE)
     f2b <- cross(f1[[3]],f1[[4]],m=10,obl=TRUE)
     f3a <- cross(f2a,f2b,m=10,obl=TRUE)
