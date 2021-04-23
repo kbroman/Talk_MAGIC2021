@@ -4,19 +4,18 @@ library(broman)
 source("colors.R")
 color2 <- broman::brocolors("crayons")[c("Cornflower", "Tickle Me Pink", "Sea Green")]
 
-
 lines <- read.csv("../Data/lines_code_by_version.csv")
 lines <- lines[nrow(lines):1,]
 library(lubridate)
-lines[,2] <- dmy(as.character(lines[,2]))
+lines[,2] <- ymd(as.character(lines[,2]))
 
-pdf("../Figs/rqtl_lines_code.pdf", width=12, height=6.5, pointsize=18)
+pdf("../Figs/rqtl_lines_code.pdf", width=10, height=6.5, pointsize=18)
 par(mar=c(3.6, 5.1, 2.3, 0.1),las=1,fg="white",col="white",col.axis="white",col.lab="lightblue",
     bg=bgcolor,bty="n")
 
 yat <- seq(0, 40000, by=5000)
 
-yr <- 2000:2020
+yr <- 2000:2022
 idea <- as.numeric(dmy("23 Feb 2000"))
 R100 <- as.numeric(dmy("29 Feb 2000"))
 svn <- as.numeric(dmy("16 Jan 2008"))
@@ -31,7 +30,7 @@ grayplot(lines[,2], lines[,3], xlab="", ylab="", yat=yat, xat=NA,
          xlim=range(xaxis), xaxs="i", mgp.y=c(3.3, 0.4, 0))
 title(xlab="Year", col.lab="lightblue", cex.lab=1.7, mgp=c(2,0,0))
 title(ylab="Lines of code", col.lab="lightblue", cex.lab=1.5, mgp=c(3.6,0,0))
-for(i in 5:4)
+for(i in 4:5)
   points(lines[,2], lines[,i], pch=21, col="black", bg=color2[i-2])
 
 u <- par("usr")
@@ -42,7 +41,7 @@ for(i in 2:length(xaxis)) {
   end <- min(c(xaxis[i], u[2]))
   rect(start, u[3], end, u[3]-h, xpd=TRUE,
        col=col, border=col, lend=1, ljoin=1)
-  text((start + end)/2, u[3]-h/2, yr[i-1], col="white", xpd=TRUE, cex=0.75)
+  text((start + end)/2, u[3]-h/2, yr[i-1], col="white", xpd=TRUE, cex=0.6)
 }
 abline(h=0, col="black")
 
@@ -58,7 +57,8 @@ text(svn, txt, "svn", adj=c(0.5, 0), col=col)
 text(git, txt, "git", adj=c(0.5, 0), col=col)
 
 x <- max(lines[,2])
-text(rep(x, 3) + c(170, 170, 100), lines[nrow(lines),3:5] + c(0, 0,-1800),
+x2 <- ymd("2021-08-01")
+text(c(x2,x2,x), lines[nrow(lines),3:5] + c(0,0,+1800),
      c("R", "C", "doc"), col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
