@@ -1,6 +1,6 @@
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file # --vanilla, but without --no-environ
 
-STEM = msu2019
+STEM = magic2021
 
 FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/phefile.pdf \
@@ -18,10 +18,12 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/ri8self.pdf \
 	   Figs/hs.pdf
 
-docs/$(STEM).pdf: $(STEM).pdf
+all: docs/$(STEM)A.pdf docs/$(STEM)B.pdf
+
+docs/$(STEM)%.pdf: $(STEM)%.pdf
 	cp $< $@
 
-$(STEM).pdf: $(STEM).tex header.tex $(FIGS)
+$(STEM)%.pdf: $(STEM)%.tex header.tex $(FIGS)
 	xelatex $<
 
 Figs/rqtl_lines_code.pdf: R/rqtl_lines_code.R R/colors.R Data/lines_code_by_version.csv
