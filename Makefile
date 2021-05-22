@@ -18,12 +18,18 @@ FIGS = Figs/rqtl_lines_code.pdf \
 	   Figs/ri8self.pdf \
 	   Figs/hs.pdf
 
-all: docs/$(STEM)A.pdf docs/$(STEM)B.pdf
+all: docs/$(STEM)A.pdf docs/$(STEM)B.pdf docs/$(STEM).pdf
 
 docs/$(STEM)%.pdf: $(STEM)%.pdf
 	cp $< $@
 
 $(STEM)%.pdf: $(STEM)%.tex header.tex $(FIGS)
+	xelatex $<
+
+docs/$(STEM).pdf: $(STEM).pdf
+	cp $< $@
+
+$(STEM).pdf: $(STEM).tex header.tex $(FIGS)
 	xelatex $<
 
 Figs/rqtl_lines_code.pdf: R/rqtl_lines_code.R R/colors.R Data/lines_code_by_version.csv
